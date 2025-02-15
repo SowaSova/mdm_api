@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "mdm-api"
+version = "0.1.0"
+description = ""
+authors = ["SowaSova <cei4bio@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.8"
+pydantic-settings = "^2.7.1"
+sqlalchemy = {extras = ["alembic"], version = "^2.0.38"}
+alembic = {extras = ["sqlalchemy"], version = "^1.14.1"}
+asyncpg = "^0.30.0"
+loguru = "^0.7.3"
+uvicorn = "^0.34.0"
+httpx = "^0.28.1"
+pytest = "^8.3.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 80
+target-version = "py312"
+show-fixes = true
